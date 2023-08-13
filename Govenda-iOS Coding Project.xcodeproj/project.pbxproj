@@ -10,7 +10,6 @@
 		DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F59F2A897694008DE48F /* AppDelegate.swift */; };
 		DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5A12A897694008DE48F /* SceneDelegate.swift */; };
 		DDB7F5A42A897694008DE48F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5A32A897694008DE48F /* ViewController.swift */; };
-		DDB7F5A72A897694008DE48F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F5A52A897694008DE48F /* Main.storyboard */; };
 		DDB7F5A92A897695008DE48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F5A82A897695008DE48F /* Assets.xcassets */; };
 		DDB7F5AC2A897695008DE48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */; };
 		DDB7F5B72A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5B62A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift */; };
@@ -40,7 +39,6 @@
 		DDB7F59F2A897694008DE48F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB7F5A12A897694008DE48F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DDB7F5A32A897694008DE48F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DDB7F5A62A897694008DE48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB7F5A82A897695008DE48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB7F5AB2A897695008DE48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB7F5AD2A897695008DE48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				DDB7F59F2A897694008DE48F /* AppDelegate.swift */,
 				DDB7F5A12A897694008DE48F /* SceneDelegate.swift */,
 				DDB7F5A32A897694008DE48F /* ViewController.swift */,
-				DDB7F5A52A897694008DE48F /* Main.storyboard */,
 				DDB7F5A82A897695008DE48F /* Assets.xcassets */,
 				DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */,
 				DDB7F5AD2A897695008DE48F /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				DDB7F5AC2A897695008DE48F /* LaunchScreen.storyboard in Resources */,
 				DDB7F5A92A897695008DE48F /* Assets.xcassets in Resources */,
-				DDB7F5A72A897694008DE48F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DDB7F5A52A897694008DE48F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDB7F5A62A897694008DE48F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +430,7 @@
 				INFOPLIST_FILE = "Govenda-iOS Coding Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +458,7 @@
 				INFOPLIST_FILE = "Govenda-iOS Coding Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
