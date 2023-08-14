@@ -1,0 +1,12 @@
+//
+//  APIKey.xcconfig
+//  Govenda-iOS Coding Project
+//
+//  Created by James Pamplona on 8/13/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Add Pexels API key below
+API_KEY = // Add unquoted API Key here

@@ -15,6 +15,7 @@
 		DDB7F5B72A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5B62A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift */; };
 		DDB7F5C12A897695008DE48F /* Govenda_iOS_Coding_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5C02A897695008DE48F /* Govenda_iOS_Coding_ProjectUITests.swift */; };
 		DDB7F5C32A897695008DE48F /* Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5C22A897695008DE48F /* Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift */; };
+		DDD72F0E2A8AA3D600BAE489 /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F0D2A8AA3D600BAE489 /* PhotoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		DDB7F5BC2A897695008DE48F /* Govenda-iOS Coding ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Govenda-iOS Coding ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB7F5C02A897695008DE48F /* Govenda_iOS_Coding_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Govenda_iOS_Coding_ProjectUITests.swift; sourceTree = "<group>"; };
 		DDB7F5C22A897695008DE48F /* Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDD2AE5B2A898A9D00EBEFF6 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		DDD72F0D2A8AA3D600BAE489 /* PhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +103,11 @@
 				DDB7F59F2A897694008DE48F /* AppDelegate.swift */,
 				DDB7F5A12A897694008DE48F /* SceneDelegate.swift */,
 				DDD72F102A8AAA4300BAE489 /* ViewControllers */,
+				DDD72F0F2A8AA3DD00BAE489 /* Networking */,
 				DDB7F5A82A897695008DE48F /* Assets.xcassets */,
 				DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */,
 				DDB7F5AD2A897695008DE48F /* Info.plist */,
+				DDD2AE5B2A898A9D00EBEFF6 /* APIKey.xcconfig */,
 			);
 			path = "Govenda-iOS Coding Project";
 			sourceTree = "<group>";
@@ -122,6 +127,14 @@
 				DDB7F5C22A897695008DE48F /* Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift */,
 			);
 			path = "Govenda-iOS Coding ProjectUITests";
+			sourceTree = "<group>";
+		};
+		DDD72F0F2A8AA3DD00BAE489 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DDD72F0D2A8AA3D600BAE489 /* PhotoProvider.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		DDD72F102A8AAA4300BAE489 /* ViewControllers */ = {
@@ -265,6 +278,7 @@
 				DDB7F5A42A897694008DE48F /* ViewController.swift in Sources */,
 				DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */,
 				DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */,
+				DDD72F0E2A8AA3D600BAE489 /* PhotoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +328,7 @@
 /* Begin XCBuildConfiguration section */
 		DDB7F5C42A897695008DE48F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD2AE5B2A898A9D00EBEFF6 /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -374,6 +389,7 @@
 		};
 		DDB7F5C52A897695008DE48F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD2AE5B2A898A9D00EBEFF6 /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
