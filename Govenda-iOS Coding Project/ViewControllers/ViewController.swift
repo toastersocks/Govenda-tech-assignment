@@ -23,6 +23,12 @@ class ViewController: UIViewController {
             label.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             label.trailingAnchor.constraint(lessThanOrEqualToSystemSpacingAfter: view.trailingAnchor, multiplier: 1),
         ])
+
+        guard let photoProvider = PhotoProvider() else { return }
+
+        Task.detached {
+            let json = try await photoProvider.curatedPhotos(page: 1, photosPerPage: 4)
+        }
     }
 
 

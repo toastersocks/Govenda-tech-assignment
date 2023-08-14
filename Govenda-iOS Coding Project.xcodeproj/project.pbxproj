@@ -99,7 +99,7 @@
 			children = (
 				DDB7F59F2A897694008DE48F /* AppDelegate.swift */,
 				DDB7F5A12A897694008DE48F /* SceneDelegate.swift */,
-				DDB7F5A32A897694008DE48F /* ViewController.swift */,
+				DDD72F102A8AAA4300BAE489 /* ViewControllers */,
 				DDB7F5A82A897695008DE48F /* Assets.xcassets */,
 				DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */,
 				DDB7F5AD2A897695008DE48F /* Info.plist */,
@@ -122,6 +122,14 @@
 				DDB7F5C22A897695008DE48F /* Govenda_iOS_Coding_ProjectUITestsLaunchTests.swift */,
 			);
 			path = "Govenda-iOS Coding ProjectUITests";
+			sourceTree = "<group>";
+		};
+		DDD72F102A8AAA4300BAE489 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7F5A32A897694008DE48F /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
