@@ -25,7 +25,7 @@ class PhotoProvider {
         self.urlSession = URLSession(configuration: sessionConfig)
     }
 
-    func curatedPhotos(page: Int, photosPerPage: Int) async throws -> String {
+    private func curatedPhotosJSON(page: Int, photosPerPage: Int) async throws -> Data {
 
         let curatedURL = apiBaseURL
             .appending(component: "curated")
@@ -40,8 +40,27 @@ class PhotoProvider {
             print(json)
             print(response)
 
-            return json
+            return data
 
+        } catch {
+            print(error)
+            throw error
+        }
+    }
+
+
+    /// Get curated photos from Pexels
+    /// - Parameters:
+    ///   - page: The page index of the photos to return
+    ///   - photosPerPage: The number of photos to return per page.
+    /// - Returns: An array of photo instances.
+    func curatedPhotos(page: Int, photosPerPage: Int) async throws -> [Photo] {
+        let json = try await curatedPhotosJSON(page: page, photosPerPage: photosPerPage)
+
+        do {
+            let photos = try JSONDecoder().decode(PhotoRequestResponse.self, from: json).photos
+
+            return photos
         } catch {
             print(error)
             throw error
