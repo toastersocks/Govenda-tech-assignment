@@ -48,6 +48,7 @@ class PhotosMainViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let model = viewModel[indexPath.item]
         let imageView = UIImageView()
+        imageView.accessibilityLabel = model.altText
         
         // Make the background of the image the average color of the photo for a nice effect while the image is being loaded.
         imageView.backgroundColor = model.averageColor
