@@ -20,6 +20,7 @@
 		DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */; };
 		DDD72F172A8AB8BD00BAE489 /* PhotosMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */; };
 		DDD72F1B2A8AD00600BAE489 /* PhotosMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */; };
+		DDD72F212A8C35BB00BAE489 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F202A8C35BB00BAE489 /* PhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 				DDB7F5A12A897694008DE48F /* SceneDelegate.swift */,
 				DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */,
 				DDD72F112A8AAB5C00BAE489 /* Model */,
+				DDD72F222A8C35EF00BAE489 /* View Models */,
 				DDD72F102A8AAA4300BAE489 /* ViewControllers */,
 				DDD72F0F2A8AA3DD00BAE489 /* Networking */,
 				DDB7F5A82A897695008DE48F /* Assets.xcassets */,
@@ -163,6 +165,15 @@
 				DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DDD72F222A8C35EF00BAE489 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */,
+				DDD72F202A8C35BB00BAE489 /* PhotoViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB7F5A42A897694008DE48F /* ViewController.swift in Sources */,
+				DDD72F212A8C35BB00BAE489 /* PhotoViewModel.swift in Sources */,
 				DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */,
 				DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */,
 				DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */,
