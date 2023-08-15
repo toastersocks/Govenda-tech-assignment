@@ -25,8 +25,8 @@ class PhotosMainViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         viewModel.refreshPhotos(page: 1, photosPerPage: 80)
-        Task.detached { @MainActor in
 
+        Task.detached { @MainActor in
             for try await _ in self.viewModel.$photos.values {
                 self.collectionView.reloadData()
             }
@@ -47,9 +47,9 @@ class PhotosMainViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let model = viewModel[indexPath.item]
-//        let imageView = UIImageView()
-        let imageView = UILabel()
-        imageView.text = model.altText
+        let imageView = UIImageView()
+        
+        // Make the background of the image the average color of the photo for a nice effect while the image is being loaded.
         imageView.backgroundColor = model.averageColor
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,11 +60,9 @@ class PhotosMainViewController: UICollectionViewController {
             imageView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
         ])
-        /*
         Task.detached { @MainActor in
             imageView.image = try? await model.thumbnail
         }
-        */
 
         return cell
     }
