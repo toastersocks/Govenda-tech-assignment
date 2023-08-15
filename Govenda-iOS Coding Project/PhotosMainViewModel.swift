@@ -14,22 +14,6 @@ class PhotosMainViewModel: ObservableObject {
     @Published private(set)
     var photos: [PhotoViewModel] = []
 
-    /*
-    lazy var photosStream: AsyncStream<[PhotoViewModel]> = AsyncStream(unfolding: { [weak self] in
-        guard let self else { return nil }
-
-        do {
-            return try await photosProvider.curatedPhotos(page: 1, photosPerPage: 4)
-                .map(PhotoViewModel.init)
-        } catch {
-            print(error)
-
-            return nil
-        }
-
-    })
-    */
-
     init() {
         guard let photosProvider = PhotoProvider() else { preconditionFailure("Make sure you've set up an api key in APIKey.xcconfig or pass an api key to the PhotoProvider initializer.") }
 
