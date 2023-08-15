@@ -18,6 +18,8 @@
 		DDD72F0E2A8AA3D600BAE489 /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F0D2A8AA3D600BAE489 /* PhotoProvider.swift */; };
 		DDD72F132A8AAB7400BAE489 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F122A8AAB7400BAE489 /* Photo.swift */; };
 		DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */; };
+		DDD72F172A8AB8BD00BAE489 /* PhotosMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */; };
+		DDD72F1B2A8AD00600BAE489 /* PhotosMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		DDD72F0D2A8AA3D600BAE489 /* PhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
 		DDD72F122A8AAB7400BAE489 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRequestResponse.swift; sourceTree = "<group>"; };
+		DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMainViewController.swift; sourceTree = "<group>"; };
+		DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB7F5A32A897694008DE48F /* ViewController.swift */,
+				DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +299,8 @@
 				DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */,
 				DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */,
 				DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */,
+				DDD72F172A8AB8BD00BAE489 /* PhotosMainViewController.swift in Sources */,
+				DDD72F1B2A8AD00600BAE489 /* PhotosMainViewModel.swift in Sources */,
 				DDD72F0E2A8AA3D600BAE489 /* PhotoProvider.swift in Sources */,
 				DDD72F132A8AAB7400BAE489 /* Photo.swift in Sources */,
 			);
