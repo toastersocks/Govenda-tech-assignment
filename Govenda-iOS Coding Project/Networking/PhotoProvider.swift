@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Provides Photos from the Pexels API
 class PhotoProvider {
     private let apiBaseURL: URL
     private let urlSession: URLSession
