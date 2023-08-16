@@ -36,9 +36,9 @@ class PhotoProvider {
 
         do {
             let (data, response) = try await self.urlSession.data(from: curatedURL)
-            let json = String(decoding: data, as: UTF8.self)
-            print(json)
-            print(response)
+
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
+                  (200...299).contains(statusCode) else { return "".data(using: .utf8)! }
 
             return data
 
