@@ -67,4 +67,50 @@ class PhotoProvider {
             throw error
         }
     }
+
+
+
+    /// Fetches image data for a photo size from a `Photo`.
+    /// - Parameters:
+    ///   - photo: The `Photo` to retrieve data for.
+    ///   - size: The size to fetch.
+    /// - Returns: Data for a photo size.  If the data could not be retrieved, the data will be empty
+    func fetch(photo: Photo, size: PhotoSize) async throws -> Data {
+        let sizeURL: URL
+        switch size {
+        case .original:
+            sizeURL = photo.imageURLs.original
+        case .large:
+            sizeURL = photo.imageURLs.large
+        case .large2x:
+            sizeURL = photo.imageURLs.large2x
+        case .medium:
+            sizeURL = photo.imageURLs.medium
+        case .small:
+            sizeURL = photo.imageURLs.small
+        case .portrait:
+            sizeURL = photo.imageURLs.portrait
+        case .landscape:
+            sizeURL = photo.imageURLs.landscape
+        case .tiny:
+            sizeURL = photo.imageURLs.tiny
+        }
+        let (data, response) = try await urlSession.data(from: sizeURL)
+
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
+        (200...299).contains(statusCode) else { return Data() }
+
+        return data
+    }
+
+    enum PhotoSize {
+        case original
+        case large
+        case large2x
+        case medium
+        case small
+        case portrait
+        case landscape
+        case tiny
+    }
 }
