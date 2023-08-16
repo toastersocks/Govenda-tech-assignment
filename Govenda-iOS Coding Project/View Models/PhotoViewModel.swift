@@ -11,6 +11,8 @@ import UIKit
 @dynamicMemberLookup
 class PhotoViewModel {
     private let photo: Photo
+    private let photoProvider: PhotoProvider
+
     var thumbnail: UIImage? {
         get async throws {
             let imageData = try Data(contentsOf: self.photo.imageURLs.tiny)
@@ -19,6 +21,8 @@ class PhotoViewModel {
         }
     }
 
+
+    /// Gets the average color of the photo as a `UIColor`
     var averageColor: UIColor {
         let hex = String(photo.averageColor.trimmingPrefix(/#/))
 
@@ -38,8 +42,22 @@ class PhotoViewModel {
         return UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
 
-    init(_ photo: Photo) {
+    func getOriginalSizeImage() async -> UIImage? {
+        do {
+            async let imageData = photoProvider.fetch(photo: photo, size: .original)
+
+            return await UIImage(data: try imageData)
+
+        } catch {
+            print(error)
+
+            return nil
+        }
+    }
+
+    init(_ photo: Photo, provider: PhotoProvider) {
         self.photo = photo
+        self.photoProvider = provider
     }
 
     subscript<MemberType>(dynamicMember keyPath: KeyPath<Photo, MemberType>) -> MemberType {

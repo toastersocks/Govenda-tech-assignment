@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F59F2A897694008DE48F /* AppDelegate.swift */; };
 		DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5A12A897694008DE48F /* SceneDelegate.swift */; };
-		DDB7F5A42A897694008DE48F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5A32A897694008DE48F /* ViewController.swift */; };
 		DDB7F5A92A897695008DE48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F5A82A897695008DE48F /* Assets.xcassets */; };
 		DDB7F5AC2A897695008DE48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB7F5AA2A897695008DE48F /* LaunchScreen.storyboard */; };
 		DDB7F5B72A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7F5B62A897695008DE48F /* Govenda_iOS_Coding_ProjectTests.swift */; };
@@ -20,7 +19,10 @@
 		DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */; };
 		DDD72F172A8AB8BD00BAE489 /* PhotosMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */; };
 		DDD72F1B2A8AD00600BAE489 /* PhotosMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */; };
+		DDD72F1D2A8AEC4D00BAE489 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F1C2A8AEC4D00BAE489 /* RootViewController.swift */; };
+		DDD72F1F2A8C339B00BAE489 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F1E2A8C339B00BAE489 /* PhotoDetailViewController.swift */; };
 		DDD72F212A8C35BB00BAE489 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F202A8C35BB00BAE489 /* PhotoViewModel.swift */; };
+		DDD72F242A8D757B00BAE489 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD72F232A8D757B00BAE489 /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,6 @@
 		DDB7F59C2A897694008DE48F /* Govenda-iOS Coding Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Govenda-iOS Coding Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB7F59F2A897694008DE48F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB7F5A12A897694008DE48F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDB7F5A32A897694008DE48F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDB7F5A82A897695008DE48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB7F5AB2A897695008DE48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB7F5AD2A897695008DE48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,10 @@
 		DDD72F142A8AB17A00BAE489 /* PhotoRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRequestResponse.swift; sourceTree = "<group>"; };
 		DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMainViewController.swift; sourceTree = "<group>"; };
 		DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMainViewModel.swift; sourceTree = "<group>"; };
+		DDD72F1C2A8AEC4D00BAE489 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DDD72F1E2A8C339B00BAE489 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		DDD72F202A8C35BB00BAE489 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		DDD72F232A8D757B00BAE489 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +116,6 @@
 			children = (
 				DDB7F59F2A897694008DE48F /* AppDelegate.swift */,
 				DDB7F5A12A897694008DE48F /* SceneDelegate.swift */,
-				DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */,
 				DDD72F112A8AAB5C00BAE489 /* Model */,
 				DDD72F222A8C35EF00BAE489 /* View Models */,
 				DDD72F102A8AAA4300BAE489 /* ViewControllers */,
@@ -152,8 +156,9 @@
 		DDD72F102A8AAA4300BAE489 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDB7F5A32A897694008DE48F /* ViewController.swift */,
 				DDD72F162A8AB8BD00BAE489 /* PhotosMainViewController.swift */,
+				DDD72F1C2A8AEC4D00BAE489 /* RootViewController.swift */,
+				DDD72F1E2A8C339B00BAE489 /* PhotoDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				DDD72F1A2A8AD00600BAE489 /* PhotosMainViewModel.swift */,
 				DDD72F202A8C35BB00BAE489 /* PhotoViewModel.swift */,
+				DDD72F232A8D757B00BAE489 /* RootViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -306,14 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB7F5A42A897694008DE48F /* ViewController.swift in Sources */,
 				DDD72F212A8C35BB00BAE489 /* PhotoViewModel.swift in Sources */,
 				DDB7F5A02A897694008DE48F /* AppDelegate.swift in Sources */,
 				DDB7F5A22A897694008DE48F /* SceneDelegate.swift in Sources */,
 				DDD72F152A8AB17A00BAE489 /* PhotoRequestResponse.swift in Sources */,
+				DDD72F1D2A8AEC4D00BAE489 /* RootViewController.swift in Sources */,
 				DDD72F172A8AB8BD00BAE489 /* PhotosMainViewController.swift in Sources */,
 				DDD72F1B2A8AD00600BAE489 /* PhotosMainViewModel.swift in Sources */,
 				DDD72F0E2A8AA3D600BAE489 /* PhotoProvider.swift in Sources */,
+				DDD72F1F2A8C339B00BAE489 /* PhotoDetailViewController.swift in Sources */,
+				DDD72F242A8D757B00BAE489 /* RootViewModel.swift in Sources */,
 				DDD72F132A8AAB7400BAE489 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

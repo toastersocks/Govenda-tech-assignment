@@ -9,21 +9,26 @@ import UIKit
 
 
 class PhotosMainViewModel: ObservableObject {
-    private let photosProvider: PhotoProvider
+    private let photoProvider: PhotoProvider
 
     @Published private(set)
     var photos: [PhotoViewModel] = []
 
-    init() {
-        guard let photosProvider = PhotoProvider() else { preconditionFailure("Make sure you've set up an api key in APIKey.xcconfig or pass an api key to the PhotoProvider initializer.") }
+    @Published
+    var selectedPhoto: PhotoViewModel? = nil
 
-        self.photosProvider = photosProvider
+    init(photoProvider: PhotoProvider) {
+        self.photoProvider = photoProvider
     }
 
     func refreshPhotos(page: Int, photosPerPage: Int) {
-        Task.detached { @MainActor in
-            self.photos = try await self.photosProvider.curatedPhotos(page: page, photosPerPage: photosPerPage)
-                .map(PhotoViewModel.init)
+        Task.detached { @MainActor [weak self, photoProvider] in
+            guard let self else { return }
+            
+            self.photos = try await photoProvider.curatedPhotos(page: page, photosPerPage: photosPerPage)
+                .map {
+                    PhotoViewModel($0, provider: photoProvider)
+                }
         }
     }
 

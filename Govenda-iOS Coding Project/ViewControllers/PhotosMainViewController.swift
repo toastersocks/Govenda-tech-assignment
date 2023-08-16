@@ -12,7 +12,7 @@ import Combine
 private let reuseIdentifier = "Cell"
 
 class PhotosMainViewController: UICollectionViewController {
-    let viewModel = PhotosMainViewModel()
+    var viewModel: PhotosMainViewModel
 
 
     override func viewDidLoad() {
@@ -31,6 +31,17 @@ class PhotosMainViewController: UICollectionViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+
+    init(viewModel: PhotosMainViewModel) {
+        self.viewModel = viewModel
+
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: UICollectionViewDataSource
@@ -66,6 +77,10 @@ class PhotosMainViewController: UICollectionViewController {
         }
 
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectedPhoto = viewModel[indexPath.item]
     }
 
     // MARK: UICollectionViewDelegate
