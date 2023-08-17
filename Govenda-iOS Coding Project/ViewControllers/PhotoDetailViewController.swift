@@ -47,7 +47,7 @@ class PhotoDetailViewController: UIViewController {
         guard let viewModel else { photoImageView.image = nil; return }
 
         async let largeImage = viewModel.getOriginalSizeImage()
-
+        photoImageView.accessibilityLabel = viewModel.altText
         altTextView.text = viewModel.altText
         photographerNameView.text = viewModel.photographerName
         sizeView.text = viewModel.sizeText
@@ -77,6 +77,7 @@ class PhotoDetailViewController: UIViewController {
         sizeView.adjustsFontForContentSizeCategory = true
         photographerNameView.adjustsFontForContentSizeCategory = true
 
+        altTextView.accessibilityElementsHidden = true
         view.addSubview(photoImageView)
         view.addSubview(photoInfoStack)
 
