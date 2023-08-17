@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class PhotosMainViewController: UICollectionViewController {
     var viewModel: PhotosMainViewModel
+    let isHorizontalCompact: Bool
 
 
     override func viewDidLoad() {
@@ -34,8 +35,9 @@ class PhotosMainViewController: UICollectionViewController {
         }
     }
 
-    init(viewModel: PhotosMainViewModel) {
+    init(viewModel: PhotosMainViewModel, isHorizontalCompact: Bool) {
         self.viewModel = viewModel
+        self.isHorizontalCompact = isHorizontalCompact
 
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
@@ -61,7 +63,7 @@ class PhotosMainViewController: UICollectionViewController {
         let model = viewModel[indexPath.item]
         let imageView = UIImageView()
         imageView.accessibilityLabel = model.altText
-        
+
         // Make the background of the image the average color of the photo for a nice effect while the image is being loaded.
         imageView.backgroundColor = model.averageColor
 
@@ -82,6 +84,9 @@ class PhotosMainViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectedPhoto = viewModel[indexPath.item]
+        if isHorizontalCompact {
+            navigationController?.show(PhotoDetailViewController(photoViewModel: viewModel.selectedPhoto), sender: self)
+        }
     }
 
     // MARK: UICollectionViewDelegate

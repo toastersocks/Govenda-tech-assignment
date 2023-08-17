@@ -10,8 +10,9 @@ import Combine
 
 
 class RootViewController: UISplitViewController {
-    var detailNavigationController: UINavigationController? = nil
-    var photoDetailViewController = PhotoDetailViewController(photoViewModel: nil)
+    private var detailNavigationController: UINavigationController? = nil
+    private var compactNavigationController: UINavigationController? = nil
+    private var photoDetailViewController = PhotoDetailViewController(photoViewModel: nil)
     var viewModel: RootViewModel
 
     private var cancelBag: Set<AnyCancellable> = []
@@ -19,11 +20,13 @@ class RootViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        let mainViewController = PhotosMainViewController(viewModel: viewModel.mainViewModel, isHorizontalCompact: false)
+        let mainCompactViewController = PhotosMainViewController(viewModel: viewModel.mainViewModel, isHorizontalCompact: true)
         detailNavigationController = UINavigationController(rootViewController: photoDetailViewController)
-
-        setViewController(PhotosMainViewController(viewModel: viewModel.mainViewModel), for: .primary)
+        compactNavigationController = UINavigationController(rootViewController: mainCompactViewController)
+        setViewController(mainViewController, for: .primary)
         setViewController(detailNavigationController, for: .secondary)
+        setViewController(compactNavigationController, for: .compact)
 
         viewModel.$detailViewModel.assign(to: \.viewModel, on: photoDetailViewController)
             .store(in: &cancelBag)
