@@ -31,6 +31,12 @@ class PhotoDetailViewController: UIViewController {
         self.viewModel = photoViewModel
 
         super.init(nibName: nil, bundle: nil)
+
+        Task.detached { [weak self] in
+            guard let self else { return }
+
+            await refresh(withViewModel: photoViewModel)
+        }
     }
 
     @MainActor
