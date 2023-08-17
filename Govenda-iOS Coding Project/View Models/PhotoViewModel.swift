@@ -21,7 +21,6 @@ class PhotoViewModel {
         }
     }
 
-
     /// Gets the average color of the photo as a `UIColor`
     var averageColor: UIColor {
         let hex = String(photo.averageColor.trimmingPrefix(/#/))
@@ -40,6 +39,10 @@ class PhotoViewModel {
         blue = CGFloat((hexNumber & 0x0000ff)) / 255
 
         return UIColor(red: red, green: green, blue: blue, alpha: 1)
+    }
+
+    var sizeText: String {
+        "\(photo.width) x \(photo.height)"
     }
 
     func getOriginalSizeImage() async -> UIImage? {
