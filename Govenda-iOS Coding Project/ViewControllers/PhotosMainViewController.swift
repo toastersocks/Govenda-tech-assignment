@@ -68,10 +68,10 @@ class PhotosMainViewController: UICollectionViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: cell.contentView.safeAreaLayoutGuide.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: cell.contentView.safeAreaLayoutGuide.trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: cell.contentView.safeAreaLayoutGuide.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: cell.contentView.safeAreaLayoutGuide.bottomAnchor),
         ])
         Task.detached { @MainActor in
             imageView.image = try? await model.thumbnail
