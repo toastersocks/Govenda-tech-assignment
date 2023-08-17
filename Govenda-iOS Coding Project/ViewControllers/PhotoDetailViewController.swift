@@ -26,6 +26,8 @@ class PhotoDetailViewController: UIViewController {
         sizeView
     ])
 
+    var imageTopConstraintRegular: NSLayoutConstraint? = nil
+    var imageTopConstraintCompact: NSLayoutConstraint? = nil
 
     init(photoViewModel: PhotoViewModel?) {
         self.viewModel = photoViewModel
@@ -78,10 +80,12 @@ class PhotoDetailViewController: UIViewController {
         view.addSubview(photoImageView)
         view.addSubview(photoInfoStack)
 
+        imageTopConstraintRegular = photoImageView.topAnchor.constraint(equalTo: view.topAnchor)
+        imageTopConstraintCompact = photoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+
         NSLayoutConstraint.activate([
             photoImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: photoImageView.trailingAnchor),
-            photoImageView.topAnchor.constraint(equalTo: view.topAnchor),
             view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: photoInfoStack.bottomAnchor),
             photoInfoStack.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter:  view.safeAreaLayoutGuide.leadingAnchor, multiplier: 1),
             view.safeAreaLayoutGuide.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: photoInfoStack.trailingAnchor, multiplier: 1),
@@ -89,5 +93,20 @@ class PhotoDetailViewController: UIViewController {
             photoInfoStack.topAnchor.constraint(equalToSystemSpacingBelow: photoImageView.bottomAnchor, multiplier: 1)
         ])
 
+        adjustConstraintsForSizeClass()
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adjustConstraintsForSizeClass()
+    }
+
+    func adjustConstraintsForSizeClass() {
+        if traitCollection.horizontalSizeClass == .compact {
+            imageTopConstraintCompact?.isActive = true
+            imageTopConstraintRegular?.isActive = false
+        } else {
+            imageTopConstraintCompact?.isActive = false
+            imageTopConstraintRegular?.isActive = true
+        }
     }
 }
