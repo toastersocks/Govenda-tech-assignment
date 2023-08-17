@@ -16,6 +16,7 @@ class PhotosMainViewModel: ObservableObject {
 
     @Published
     var selectedPhoto: PhotoViewModel? = nil
+    var title = "Select a photo"
 
     init(photoProvider: PhotoProvider) {
         self.photoProvider = photoProvider

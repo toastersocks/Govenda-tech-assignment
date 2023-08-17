@@ -24,6 +24,7 @@ class PhotosMainViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        title = viewModel.title
         viewModel.refreshPhotos(page: 1, photosPerPage: 80)
 
         Task.detached { @MainActor in
