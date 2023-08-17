@@ -77,6 +77,10 @@ class PhotoDetailViewController: UIViewController {
         sizeView.adjustsFontForContentSizeCategory = true
         photographerNameView.adjustsFontForContentSizeCategory = true
 
+        altTextView.font = .preferredFont(forTextStyle: .caption1)
+        sizeView.font = .preferredFont(forTextStyle: .caption1)
+        photographerNameView.font = .preferredFont(forTextStyle: .caption1)
+
         altTextView.accessibilityElementsHidden = true
         view.addSubview(photoImageView)
         view.addSubview(photoInfoStack)
